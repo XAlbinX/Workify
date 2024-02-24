@@ -8,7 +8,7 @@ interface DynamicProps {
 }
 
 const getData = async (id: string) => {
-  const res = await fetch(`/api/post/${id}`, {
+  const res = await fetch(`https://workify-jet.vercel.app/api/post/${id}`, {
     cache: "no-store",
   });
 
