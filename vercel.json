@@ -1,10 +1,13 @@
 {
-    "routes": [
-      {
-        "src": "/(.*)",
-        "headers": {
-          "Cache-Control": "no-cache, no-store, must-revalidate"
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
         }
-      }
-    ]
-  }
+      ]
+    }
+  ]
+}
