@@ -6,9 +6,8 @@ interface HeroProps {
   jobs: jobType[];
 }
 
-const Hero = async () => {
+const Hero = async ({jobs} : HeroProps ) => {
 
-  const jobs = await prisma.jobPosting.findMany({});
   return (
     <div
       id="home"
