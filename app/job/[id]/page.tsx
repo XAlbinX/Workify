@@ -8,7 +8,8 @@ interface DynamicProps {
 }
 
 const getData = async (id: string) => {
-  const res = await fetch(`https://workify-jet.vercel.app/api/post/${id}`, {
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL; // Ensure this variable is set in your environment
+  const res = await fetch(`${baseUrl}/api/post/${id}`, {
     cache: "no-store",
   });
 
