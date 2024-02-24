@@ -1,11 +1,14 @@
 import { jobType } from "@/types/jobTypes";
 import SearchForm from "./SearchForm";
+import { prisma } from "@/lib/prisma";
 
 interface HeroProps {
   jobs: jobType[];
 }
 
-const Hero = ({ jobs }: HeroProps) => {
+const Hero = async () => {
+
+  const jobs = await prisma.jobPosting.findMany({});
   return (
     <div
       id="home"
